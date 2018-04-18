@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="500.0" style="-fx-background-color: #393E46;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Text fill="WHITE" layoutX="8.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сегодня:" wrappingWidth="129.50390625" AnchorPane.bottomAnchor="173.7265625" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="362.49609375" AnchorPane.topAnchor="51.7607421875">
+         <font>
+            <Font name="Open Sans" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="13.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Влажность:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="172.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Давление:" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="11.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Восход:" visible="false">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="11.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Закат:" visible="false">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="tempTorday" fill="WHITE" layoutX="21.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="13" wrappingWidth="129.50390625" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="65.0">
+         <font>
+            <Font name="Open Sans" size="56.0" />
+         </font>
+         <effect>
+            <DropShadow height="5.0" offsetX="0.3" offsetY="0.3" radius="2.0" spread="0.14" width="5.0" />
+         </effect></Text>
+      <Text fx:id="humTorday" fill="WHITE" layoutX="117.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font></Text>
+      <Text fx:id="pressTorday" fill="WHITE" layoutX="278.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="766  мм рт. ст." AnchorPane.leftAnchor="233.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font></Text>
+      <Text fx:id="sunrise" fill="WHITE" layoutX="117.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font></Text>
+      <Text fx:id="sunset" fill="WHITE" layoutX="117.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font></Text>
+      <AnchorPane layoutY="-2.0" prefHeight="50.0" prefWidth="500.0" style="-fx-background-color: #222831;">
+         <children>
+            <Text fx:id="header" fill="WHITE" layoutX="8.0" layoutY="33.0" stroke="#393e46" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: left;" text="Погода в" wrappingWidth="485.0">
+               <font>
+                  <Font name="Open Sans Bold" size="23.0" />
+               </font>
+            </Text>
+            <Button fx:id="changeButton" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" layoutX="351.0" layoutY="11.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-width: 1px 0px 1px 0px; -fx-text-fill: white; -fx-border-color: white;" text="Другой Город" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Bold" size="12.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="2.0" />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Rectangle fill="#00adb5" height="7.0" layoutY="45.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0" />
+      <Rectangle fill="#00adb5" height="7.0" layoutY="138.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0" />
+      <Text fill="WHITE" layoutX="23.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ветер:" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="wind" fill="WHITE" layoutX="402.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="150.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="weatherIcon" fitHeight="50.0" fitWidth="50.0" layoutX="132.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="78.0">
+         <image>
+            <Image url="@img/01d.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="200.0" layoutY="71.2392578125" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="Завтра:" wrappingWidth="123.50390625" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="52.0">
+         <font>
+            <Font name="Open Sans" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="332.0" layoutY="71.0" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="Послезавтра:" wrappingWidth="129.50390625" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="52.0">
+         <font>
+            <Font name="Open Sans" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="200.0" layoutY="91.03271484375" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="Утром: " wrappingWidth="55.40771484375" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="200.0" layoutY="111.03271484375" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="Днем:" wrappingWidth="55.40771484375" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="95.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="200.0" layoutY="131.03271484375" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="Вечером:" wrappingWidth="75.52001953125" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="115.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="350.0" layoutY="131.03271484375" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="Вечером:" wrappingWidth="75.52001953125" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="115.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="350.0" layoutY="111.03271484375" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="Днем:" wrappingWidth="55.40771484375" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="95.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="350.0" layoutY="91.03271484375" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="Утром: " wrappingWidth="55.40771484375" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="mornigTMR" fill="WHITE" layoutX="268.0" layoutY="91.03271484375" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="градус" textAlignment="RIGHT" wrappingWidth="55.40771484375" AnchorPane.leftAnchor="268.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="dayTMR" fill="WHITE" layoutX="268.0" layoutY="111.03271484375" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="градус" textAlignment="RIGHT" wrappingWidth="55.40771484375" AnchorPane.leftAnchor="268.0" AnchorPane.topAnchor="95.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="evTMR" fill="WHITE" layoutX="268.0" layoutY="131.03271484375" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="градус" textAlignment="RIGHT" wrappingWidth="55.40771484375" AnchorPane.leftAnchor="268.0" AnchorPane.topAnchor="115.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="evRD" fill="WHITE" layoutX="431.0" layoutY="111.0" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="градус" textAlignment="RIGHT" wrappingWidth="55.40771484375" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="115.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="dayRD" fill="WHITE" layoutX="421.0" layoutY="101.0" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="градус" textAlignment="RIGHT" wrappingWidth="55.40771484375" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="95.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="morningRD" fill="WHITE" layoutX="415.0" layoutY="90.0" opacity="0.82" strokeType="OUTSIDE" strokeWidth="0.0" text="градус" textAlignment="RIGHT" wrappingWidth="55.40771484375" AnchorPane.leftAnchor="420.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Text>
+
+   </children>
+</AnchorPane>
